@@ -17,6 +17,31 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <style>
+
+            /* General Body Style */
+            body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f0f5; /* Soft background */
+            color: #333; /* Text color */
+            line-height: 1.6;
+        }
+
+        /* Hide the cursor for all text input and text areas */
+        input, textarea, select {
+            cursor: none; /* Hides the cursor */
+        }
+
+        /* Additionally, hide the cursor for selectable text */
+        * {
+            user-select: none; /* Disables text selection */
+        }
+
+        /* Optional: Hide the cursor for links */
+        a {
+            cursor: auto; /* Hides the cursor for links */
+        }
+
+
         /* General Body Style */
         body {
             font-family: 'Open Sans', sans-serif;
@@ -38,13 +63,13 @@
             font-size: 2.5rem;
             font-weight: bold;
             letter-spacing: 2px;
-            color: #ffcc00; /* A bright contrast color for logo */
+            color: #47A8BD; /* A bright contrast color for logo */
         }
 
         /* Custom Button Styles */
         .button {
-            background-color: #ffcc00;
-            color: #3e3e5b;
+            background-color: #47A8BD;
+            color: #47A8BD;
             border: none;
             padding: 10px 20px;
             font-size: 1.1rem;
@@ -52,7 +77,7 @@
         }
 
         .button:hover {
-            background-color: #ff9900; /* Change on hover */
+            background-color: #3e3e5b; /* Change on hover */
             color: white;
         }
 
@@ -105,7 +130,7 @@
         #footer h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
-            color: #ffcc00;
+            color: #47A8BD;
         }
 
         #footer p, #footer a {
@@ -120,7 +145,7 @@
         /* Icons */
         .icons .icon {
             font-size: 1.5rem;
-            color: #ffcc00;
+            color: #47A8BD;
         }
 
         .icons .icon:hover {
@@ -150,7 +175,7 @@
         }
 
         .button:hover {
-            background-color: #ff9900;
+            background-color: #47A8BD;
             transform: scale(1.05); /* Slightly enlarges on hover */
         }
 
@@ -217,29 +242,109 @@
         </nav>
 
         <!-- Main -->
-        <div id="main">
-            <!-- Featured Project -->
-            <article class="post featured">
-                <header class="major">
-                    <h2><a href="https://github.com/kariem-magdy/Online-Library-System" target="_blank">Online Library Database Project in SQL & C#<br /></a></h2>
-                    <p>Database Management System with 4 different application views for the User, Author, Librarian, and Administrator.</p>
-                </header>
-                <a href="https://github.com/kariem-magdy/Online-Library-System" target="_blank" class="image main">
-                    <img src="images/SQL database project pic.png" alt="" />
-                </a>
-                <ul class="actions special">
-                    <li><a href="https://github.com/kariem-magdy/Online-Library-System" target="_blank" class="button large">View Project</a></li>
-                </ul>
-            </article>
+        <!-- Filter Buttons -->
+        <section id="filter-buttons" style="text-align: center; padding: 20px;">
+            <button class="button filter-button" onclick="filterProjects('all')">All</button>
+            <button class="button filter-button" onclick="filterProjects('software')">Software</button>
+            <button class="button filter-button" onclick="filterProjects('backend')">Backend</button>
+            <button class="button filter-button" onclick="filterProjects('data-analysis')">Data Analysis</button>
+            <button class="button filter-button" onclick="filterProjects('web-scraping-api-automation')">Web Scraping & API Automation</button>
+        </section>
 
-            <!-- Other Projects -->
+        <!-- Main Projects -->
+        <div id="main">
             <section class="posts">
-                <article>
+                <!-- Project 1: Backend -->
+                <article class="project backend">
                     <header>
-                        <h2><a href="https://app.powerbi.com/links/F-n9IFmNpS" target="_blank">Data Professional Survey Breakdown in Power BI<br /></a></h2>
+                        <h2><a href="https://github.com/kariem-magdy/Fox-Reddit-Clone" target="_blank">Backend Project with TypeScript and Node.js</a></h2>
+                    </header>
+                    <a href="https://github.com/kariem-magdy/Fox-Reddit-Clone" target="_blank" class="image fit" >
+                        <img src="images/reddit logo.png" alt="" />
+                    </a>
+                    <p>Reddit clone Built using TypeScript, Node.js, and Express.js, accessible via web, Android, and iOS platforms.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/kariem-magdy/Fox-Reddit-Clone" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <!-- Project 1: Software -->
+                <article class="project software">
+                    <header>
+                        <h2><a href="https://github.com/kariem-magdy/Online-Library-System" target="_blank">Online Library Database Project in SQL & C#</a></h2>
+                    </header>
+                    <a href="https://github.com/kariem-magdy/Online-Library-System" target="_blank" class="image fit">
+                        <img src="images/result_SQL database project pic.png" alt="" />
+                    </a>
+                    <p>Database Management System with 4 different application views for the User, Author, Librarian, and Administrator.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/kariem-magdy/Online-Library-System" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <!-- Project 2: Software -->
+                <article class="project software">
+                    <header>
+                        <h2><a href="https://github.com/kariem-magdy/TowersOfHanoi-Lanes" target="_blank">Towers Of Hanoi and Switching Lanes Games</a></h2>
+                    </header>
+                    <a href="https://github.com/kariem-magdy/TowersOfHanoi-Lanes" target="_blank" class="image fit">
+                        <img src="images/result_Screenshot 2024-10-02 180248.png" alt="" />
+                    </a>
+                    <p>Towers of Hanoi software written in ARM assembly using hardware components (TFT + Blackpill MCU).</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/kariem-magdy/TowersOfHanoi-Lanes" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <!-- Project 3: Software -->
+                <article class="project software">
+                    <header>
+                        <h2><a href="https://github.com/kariem-magdy/Data-Structures" target="_blank">Data Structures Project (CPU Scheduler)</a></h2>
+                    </header>
+                    <a href="https://github.com/kariem-magdy/Data-Structures" target="_blank" class="image fit">
+                        <img src="images/result_Diagram+of+Process+State.jpg" alt="" />
+                    </a>
+                    <p>Project handling CPU schedulers and processors with different types of processes, written in C++.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/kariem-magdy/Data-Structures" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <!-- Project 4: Software -->
+                <article class="project software">
+                    <header>
+                        <h2><a href="https://github.com/kariem-magdy/Parking-Agent" target="_blank">AI Agent for Optimal Car Parking Sequence</a></h2>
+                    </header>
+                    <a href="https://github.com/kariem-magdy/Parking-Agent" target="_blank" class="image fit">
+                        <img src="images/Screenshot 2024-10-02 213212.png" alt="" />
+                    </a>
+                    <p>This AI agent is designed to solve a car parking optimization problem at a world-renowned car company in Python.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/kariem-magdy/Parking-Agent" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>
+
+                <!-- Project 5: Software -->
+                <article class="project software">
+                    <header>
+                        <h2><a href="https://github.com/kariem-magdy/Searching-Algorithms" target="_blank">Searching Algorithms in Python</a></h2>
+                    </header>
+                    <a href="https://github.com/kariem-magdy/Searching-Algorithms" target="_blank" class="image fit">
+                        <img src="images/comparing_top_10_search_algorithms.jpg" alt="" />
+                    </a>
+                    <p>Algorithms for BreadthFirstSearch, DepthFirstSearcht, UniformCostSearch, AStarSearch and BestFirstSearch.</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/kariem-magdy/Searching-Algorithms" target="_blank" class="button">View Project</a></li>
+                    </ul>
+                </article>                
+
+                <!-- Project 1: Data Analysis -->
+                <article class="project data-analysis">
+                    <header>
+                        <h2><a href="https://app.powerbi.com/links/F-n9IFmNpS" target="_blank">Data Professional Survey Breakdown in Power BI</a></h2>
                     </header>
                     <a href="https://app.powerbi.com/links/F-n9IFmNpS" target="_blank" class="image fit">
-                        <img src="images/power-bi-vector-logo-2022.png" alt="" />
+                        <img src="images/result_power-bi-vector-logo-2022.png" alt="" />
                     </a>
                     <p>Analyzed survey data of data professionals and presented insights using interactive dashboards in Power BI.</p>
                     <ul class="actions special">
@@ -247,14 +352,17 @@
                     </ul>
                 </article>
 
-                <article>
+                <!-- Project 1: Web Scraping & API Automation -->
+                <article class="project web-scraping-api-automation">
                     <header>
-                        <h2><a href="#">Another Project Title<br />Subtitle</a></h2>
+                        <h2><a href="https://github.com/kariem-magdy/Automating-Crypto-Website-API-Pull-Project" target="_blank">Automating Crypto Website API Pull Project in Python</a></h2>
                     </header>
-                    <a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-                    <p>Brief description of another project showcasing a different skill set or tool.</p>
+                    <a href="https://github.com/kariem-magdy/Automating-Crypto-Website-API-Pull-Project" target="_blank" class="image fit">
+                        <img src="images/coinmarketcap6503.jpg" alt="" />
+                    </a>
+                    <p>Automates the retrieval of cryptocurrency data from the CoinMarketCap API, analyzes and visualizes the data.</p>
                     <ul class="actions special">
-                        <li><a href="#" class="button">View Project</a></li>
+                        <li><a href="https://github.com/kariem-magdy/Automating-Crypto-Website-API-Pull-Project" target="_blank" class="button">View Project</a></li>
                     </ul>
                 </article>
             </section>
@@ -279,6 +387,24 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+        <!-- Filter Projects Script -->
+        <script>
+            function filterProjects(category) {
+                var projects = document.getElementsByClassName('project');
+                for (var i = 0; i < projects.length; i++) {
+                    if (category === 'all') {
+                        projects[i].style.display = 'block';
+                    } else {
+                        if (projects[i].classList.contains(category)) {
+                            projects[i].style.display = 'block';
+                        } else {
+                            projects[i].style.display = 'none';
+                        }
+                    }
+                }
+            }
+        </script>
 
 </body>
 </html>

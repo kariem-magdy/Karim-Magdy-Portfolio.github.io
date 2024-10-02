@@ -45,6 +45,21 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        /* Hide the cursor for all text input and text areas */
+        input, textarea, select {
+            cursor: none; /* Hides the cursor */
+        }
+
+        /* Additionally, hide the cursor for selectable text */
+        * {
+            user-select: none; /* Disables text selection */
+        }
+
+        /* Optional: Hide the cursor for links */
+        a {
+            cursor: none; /* Hides the cursor for links */
+        }
     </style>
 </head>
 <body>
