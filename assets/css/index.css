@@ -1,227 +1,35 @@
-
-/* General Body Style */
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f0f0f5; /* Soft background */
-    color: #333; /* Text color */
-    line-height: 1.6;
-    cursor: default; /* Default cursor for body */
-}
-
-/* Hide the cursor for all text input and text areas */
-input,
-textarea,
-select {
-    cursor: none; /* Hides the cursor */
-}
-
-/* Disable text selection */
-* {
-    user-select: none; /* Disables text selection */
-}
-
-/* Set default cursor for all text elements */
-h1, h2, h3, p, span, div {
-    cursor: default; /* Prevents cursor change for regular text */
-}
-
-/* Allow pointer cursor for hyperlinks */
-a {
-    cursor: pointer; /* Changes cursor to pointer for hyperlinks */
-    pointer-events: auto; /* Allows links to be clickable */
-}
-
-/* Allow pointer cursor for buttons */
-.button {
-    cursor: pointer; /* Changes cursor to pointer for buttons */
-    background-color: #47A8BD;
-    color: #fff; /* Changed color to white for contrast */
+/* Filter Buttons */
+#filter-buttons .filter-button {
+    background: rgba(255, 255, 255, 0.175); /* Same as #nav background */
+    color: #ffffff; /* White text */
     border: none;
     padding: 10px 20px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s;
+    margin: 0 10px;
+    font-size: 0.8rem;
+    border-radius: 5px; /* Rounded corners */
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
-.button:hover {
-    background-color: #3e3e5b; /* Change on hover */
-    color: white;
+/* Hover State */
+#filter-buttons .filter-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Lighter hover background */
+    color: #18bfef; /* Same hover text color as #nav links */
 }
 
-/* Header Styles */
-#header {
-    background-color: #3e3e5b; /* Unique dark background for header */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
+/* Active State */
+#filter-buttons .filter-button.active {
+    background-color: #ffffff; /* White background when active */
+    color: #1e252d; /* Dark text color when active */
 }
 
-#header .logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #47A8BD; /* A bright contrast color for logo */
-}
-
-/* Intro Section */
-#intro {
-    background-color: #d9e4f5;
-    color: #2e384d;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-#intro h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #2e384d;
-}
-
-#intro p {
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin-top: 20px;
-    color: #555;
-}
-
-/* Main Project Section */
-#main .post.featured h2 a {
-    font-family: 'Playfair Display', serif;
-    color: #3e3e5b;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-#main .post.featured p {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-#main .image.main img {
-    border-radius: 15px; /* Unique rounder corners for images */
-}
-
-/* Footer Section */
-#footer {
-    background-color: #3e3e5b;
-    color: white;
-    padding: 40px 20px;
-}
-
-#footer h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    color: #47A8BD;
-}
-
-#footer p,
-#footer a {
-    font-size: 1rem;
-    color: white;
-}
-
-#footer a:hover {
-    color: #ff9900;
-}
-
-/* Icons */
-.icons .icon {
-    font-size: 1.5rem;
-    color: #47A8BD;
-}
-
-.icons .icon:hover {
-    color: #ff9900;
-}
-
-/* Adjusting Padding and Margin */
-section.posts article {
-    margin-bottom: 50px; /* Larger spacing between projects */
-}
-
-section.posts article .image {
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.actions.special .button {
-    font-size: 1.1rem;
-    margin-top: 20px;
-    background-color: #47A8BD;
-    color: #fff;
-}
-
-/* Adding transitions to buttons */
-.button {
-    transition: all 0.4s ease;
-}
-
-.button:hover {
-    background-color: #47A8BD;
-    transform: scale(1.05); /* Slightly enlarges on hover */
-}
-
-/* Image hover effect */
-.image.main img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-/* Mobile Adjustments */
-@media screen and (max-width: 768px) {
-    #intro h1 {
-        font-size: 2.5rem; /* Reduced font size for intro heading */
-    }
-
-    #intro p {
-        font-size: 1rem; /* Reduced font size for intro paragraph */
-    }
-
-    #header .logo {
-        font-size: 2rem; /* Reduced logo size for better fit on mobile */
-    }
-
-    /* Adjust button size for mobile */
-    .button {
-        font-size: 1rem; /* Smaller button text size */
-        padding: 8px 16px; /* Adjust padding for buttons */
-        width: 100%; /* Make buttons full width on mobile */
-        box-sizing: border-box; /* Include padding in width */
-    }
-
-    /* Make images responsive */
-    #main .image.main img {
-        width: 100%; /* Full width for images */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 10px; /* Consistent border radius */
-    }
-
-    /* Adjust layout for project items */
-    section.posts article {
-        display: flex; /* Use flex for layout */
-        flex-direction: column; /* Stack items vertically on mobile */
-        align-items: center; /* Center items */
-    }
-
-    .project-item img {
-        max-width: 100%; /* Ensure images do not overflow */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    /* Adjust navigation links for mobile */
-    #nav .links {
-        display: flex; /* Use flex for horizontal layout */
-        flex-direction: column; /* Stack links vertically on mobile */
-        align-items: center; /* Center links */
-    }
-
-    #nav .links li {
-        margin: 10px 0; /* Space out the links */
-    }
-
-    /* Adjust footer for mobile */
-    #footer {
-        padding: 20px 10px; /* Reduce padding for footer */
-    }
+/* Active Hover State */
+#filter-buttons .filter-button.active:hover {
+    color: #18bfef; /* Same hover effect on active buttons */
 }

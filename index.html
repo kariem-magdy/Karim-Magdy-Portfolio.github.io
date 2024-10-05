@@ -15,7 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <link rel="stylesheet" href="assets/css/index.css"> <!-- Link to external CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/index.css"> -->
 
 
 </head>
@@ -28,7 +28,7 @@
         <!-- Intro -->
         <div id="intro">
             <h1>Karim Magdy Portfolio<br /></h1>
-            <p>Data Analyst well versed in SQL, Python, Tableau, Power BI <a href="https://www.linkedin.com/in/karim-magdy-390b3b2b0/" target="_blank">@Linkedin</a>.</p>
+            <h2>A collection of my projects</h2>
             <ul class="actions">
                 <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
             </ul>
@@ -64,19 +64,6 @@
                 </li>
             </ul>
         </nav>
-        
-        <a href="#navPanel" id="navPanelToggle" class="">Menu
-        <!-- Main -->
-        <!-- Filter Buttons -->
-        <section id="filter-buttons" style="text-align: center; padding: 20px;">
-            <button class="button filter-button" onclick="filterProjects('all')">All</button>
-            <button class="button filter-button" onclick="filterProjects('software')">Software</button>
-            <button class="button filter-button" onclick="filterProjects('backend')">Backend</button>
-            <button class="button filter-button" onclick="filterProjects('data-analysis')">Data Analysis</button>
-            <button class="button filter-button" onclick="filterProjects('web-scraping-api-automation')">Web Scraping & API Automation</button>
-        </section>
-
-        </a>
         
         <!-- Main Projects -->
         <div id="main">
@@ -215,23 +202,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-        <!-- Filter Projects Script -->
-        <script>
-            function filterProjects(category) {
-                var projects = document.getElementsByClassName('project');
-                for (var i = 0; i < projects.length; i++) {
-                    if (category === 'all') {
-                        projects[i].style.display = 'block';
-                    } else {
-                        if (projects[i].classList.contains(category)) {
-                            projects[i].style.display = 'block';
-                        } else {
-                            projects[i].style.display = 'none';
-                        }
-                    }
-                }
-            }
-        </script>
-
+        
 </body>
 </html>
