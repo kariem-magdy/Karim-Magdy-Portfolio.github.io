@@ -171,35 +171,57 @@ section.posts article .image {
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     #intro h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Reduced font size for intro heading */
     }
 
     #intro p {
-        font-size: 1rem;
+        font-size: 1rem; /* Reduced font size for intro paragraph */
     }
 
     #header .logo {
-        font-size: 2rem;
+        font-size: 2rem; /* Reduced logo size for better fit on mobile */
     }
 
     /* Adjust button size for mobile */
     .button {
-        font-size: 1rem;
-        padding: 8px 16px;
+        font-size: 1rem; /* Smaller button text size */
+        padding: 8px 16px; /* Adjust padding for buttons */
+        width: 100%; /* Make buttons full width on mobile */
+        box-sizing: border-box; /* Include padding in width */
     }
 
     /* Make images responsive */
     #main .image.main img {
-        width: 100%;
-        height: auto; /* Ensure images scale properly */
+        width: 100%; /* Full width for images */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Consistent border radius */
     }
 
     /* Adjust layout for project items */
-    .project-item {
+    section.posts article {
+        display: flex; /* Use flex for layout */
         flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items */
     }
 
     .project-item img {
         max-width: 100%; /* Ensure images do not overflow */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Adjust navigation links for mobile */
+    #nav .links {
+        display: flex; /* Use flex for horizontal layout */
+        flex-direction: column; /* Stack links vertically on mobile */
+        align-items: center; /* Center links */
+    }
+
+    #nav .links li {
+        margin: 10px 0; /* Space out the links */
+    }
+
+    /* Adjust footer for mobile */
+    #footer {
+        padding: 20px 10px; /* Reduce padding for footer */
     }
 }
