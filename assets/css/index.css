@@ -1,0 +1,205 @@
+
+/* General Body Style */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f5; /* Soft background */
+    color: #333; /* Text color */
+    line-height: 1.6;
+    cursor: default; /* Default cursor for body */
+}
+
+/* Hide the cursor for all text input and text areas */
+input,
+textarea,
+select {
+    cursor: none; /* Hides the cursor */
+}
+
+/* Disable text selection */
+* {
+    user-select: none; /* Disables text selection */
+}
+
+/* Set default cursor for all text elements */
+h1, h2, h3, p, span, div {
+    cursor: default; /* Prevents cursor change for regular text */
+}
+
+/* Allow pointer cursor for hyperlinks */
+a {
+    cursor: pointer; /* Changes cursor to pointer for hyperlinks */
+    pointer-events: auto; /* Allows links to be clickable */
+}
+
+/* Allow pointer cursor for buttons */
+.button {
+    cursor: pointer; /* Changes cursor to pointer for buttons */
+    background-color: #47A8BD;
+    color: #fff; /* Changed color to white for contrast */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #3e3e5b; /* Change on hover */
+    color: white;
+}
+
+/* Header Styles */
+#header {
+    background-color: #3e3e5b; /* Unique dark background for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+#header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #47A8BD; /* A bright contrast color for logo */
+}
+
+/* Intro Section */
+#intro {
+    background-color: #d9e4f5;
+    color: #2e384d;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2e384d;
+}
+
+#intro p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Main Project Section */
+#main .post.featured h2 a {
+    font-family: 'Playfair Display', serif;
+    color: #3e3e5b;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#main .post.featured p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#main .image.main img {
+    border-radius: 15px; /* Unique rounder corners for images */
+}
+
+/* Footer Section */
+#footer {
+    background-color: #3e3e5b;
+    color: white;
+    padding: 40px 20px;
+}
+
+#footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    color: #47A8BD;
+}
+
+#footer p,
+#footer a {
+    font-size: 1rem;
+    color: white;
+}
+
+#footer a:hover {
+    color: #ff9900;
+}
+
+/* Icons */
+.icons .icon {
+    font-size: 1.5rem;
+    color: #47A8BD;
+}
+
+.icons .icon:hover {
+    color: #ff9900;
+}
+
+/* Adjusting Padding and Margin */
+section.posts article {
+    margin-bottom: 50px; /* Larger spacing between projects */
+}
+
+section.posts article .image {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.actions.special .button {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    background-color: #47A8BD;
+    color: #fff;
+}
+
+/* Adding transitions to buttons */
+.button {
+    transition: all 0.4s ease;
+}
+
+.button:hover {
+    background-color: #47A8BD;
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Image hover effect */
+.image.main img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+
+    #intro p {
+        font-size: 1rem;
+    }
+
+    #header .logo {
+        font-size: 2rem;
+    }
+
+    /* Adjust button size for mobile */
+    .button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    /* Make images responsive */
+    #main .image.main img {
+        width: 100%;
+        height: auto; /* Ensure images scale properly */
+    }
+
+    /* Adjust layout for project items */
+    .project-item {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+
+    .project-item img {
+        max-width: 100%; /* Ensure images do not overflow */
+    }
+}

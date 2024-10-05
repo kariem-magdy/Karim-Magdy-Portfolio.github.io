@@ -1,0 +1,46 @@
+/* styles.css */
+
+/* Button styles */
+.cv-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12; /* Button color */
+    color: white; /* Text color */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.cv-button:hover {
+    background-color: #e67e22; /* Darker shade on hover */
+}
+
+.custom-hr {
+    border: none;
+    border-top: 2px solid #7a7a79;
+    width: 90%; /* Adjust the width as needed */
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+/* Hide the cursor for all text input and text areas */
+input, textarea, select {
+    cursor: none; /* Hides the cursor */
+}
+
+/* Disable text selection */
+* {
+    user-select: none; /* Disables text selection */
+}
+
+/* Links cursor */
+a {
+    cursor: pointer; /* Change cursor to pointer for links */
+}
+
+/* Prevent link cursor change for clickable images */
+img {
+    cursor: pointer; /* Change cursor to pointer for images */
+}
